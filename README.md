@@ -5,7 +5,9 @@ To setup my PC
 ``
 C:\Users\[Username]\Documents\WindowsPowerShell
 ``
+
 or
+
 ``
 C:\Dokumente und Einstellungen\[Username]\Eigene Dateien\WindowsPowerShell
 ``
