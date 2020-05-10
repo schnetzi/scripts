@@ -1,6 +1,11 @@
 # scripts
 To setup a PC
 
+## Find installed php location
+```sh
+php --ini
+```
+
 ## Git
 
 ### Linux & Mac

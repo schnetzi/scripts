@@ -7,6 +7,21 @@ sudo apt-get update
 sudo apt-get install php7.3 libapache2-mod-php7.3 mcrypt php7.3-mysql php7.3-mbstring php7.3-gettext php7.3-xml php7.3-json php7.3-curl php7.3-zip
 ```
 
+#### Add certificate to php.ini
+
+* Find location of php
+```sh
+php --ini
+```
+* Add the `cacert.pem`-file to the folder
+* Right click on the file and see if security blocks file
+* Allow / unblock file
+* Change the following line in the `php.ini`-file
+```ini
+curl.cainfo = C:\php\cacert.pem
+```
+
+
 ### composer in wsl
 ```sh
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
