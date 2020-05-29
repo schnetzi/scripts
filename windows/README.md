@@ -19,6 +19,7 @@ wsl.exe --set-default-version 2
 ```
 
 #### Install Ubuntu
+
 * Open Windows Store
 * Search Ubuntu
 * Install Ubuntu 20.04 LTS
@@ -77,7 +78,19 @@ Open PowerShell and execute the installer in the fonts folder.
 ```
 .\install.ps1
 ```
-When getting errors for script execution look [here for Restriction Cause](#powershell-restriction)
+When getting errors for script execution look [here for Restriction Cause](#powershell-restriction).
+
+Afterwards you can set the value back running the following:
+```sh
+Set-ExecutionPolicy Restricted
+```
+
+To get the font working properly follow these steps:
+
+* Open WSL
+* Right click at the top menu bar and choose settings
+* Go to font
+* Select "DejaVu Sans Mono for Powerline"
 
 ## GitHub
 
@@ -88,7 +101,7 @@ Connect shell to github. See [ubuntu-README.md](../ubuntu/README.md#github).
 ### Windows folder location
 
 #### <a name="powershell-restriction"></a>PowerShell Restriction
-PowerShell restricts scripts by default. To disable that (Not recommended but needed to work) run the following in admin-PowerShell
+PowerShell restricts scripts by default. To disable that (not recommended but needed to work) run the following in admin-PowerShell
 ```sh
 Set-ExecutionPolicy Unrestricted
 ```
