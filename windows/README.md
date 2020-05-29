@@ -18,7 +18,7 @@ Enable WSL 2
 wsl.exe --set-default-version 2
 ```
 
-#### To install Ubuntu
+#### Install Ubuntu
 * Open Windows Store
 * Search Ubuntu
 * Install Ubuntu 20.04 LTS
@@ -65,13 +65,33 @@ php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
+### Install zsh
+See guide in [ubuntu-README.md](../ubuntu/README.md#zsh)
+
+Clone the repository for the fonts with wsl
+```sh
+git clone https://github.com/powerline/fonts.git
+```
+
+Open PowerShell and execute the installer in the fonts folder.
+```
+.\install.ps1
+```
+When getting errors for script execution look [here for Restriction Cause](#powershell-restriction)
+
 ## GitHub
 
-Connect shell to github. See [ubuntu-README.md](../ubuntu/README.md).
+Connect shell to github. See [ubuntu-README.md](../ubuntu/README.md#github).
 
-## Git
+## git settings
 
 ### Windows folder location
+
+#### <a name="powershell-restriction"></a>PowerShell Restriction
+PowerShell restricts scripts by default. To disable that (Not recommended but needed to work) run the following in admin-PowerShell
+```sh
+Set-ExecutionPolicy Unrestricted
+```
 
 Copy the file `Microsoft.PowerShell_profile.ps1` into the following folder.
 
