@@ -31,11 +31,17 @@ sudo apt install -y vim
 ## GitHub
 ```sh
 ssh-keygen -t rsa -b 4096 -C "schnetzi@users.noreply.github.com"
-sudo apt-get install -y xclip
-xclip -sel clip < ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 ```
-Add ssh-key to SSH-Keys in GitHub
+
+Add ssh-key to SSH-Keys on GitHub-website.
+
+## Setup git
+```sh
+git config --global user.email "schnetzi@users.noreply.github.com"
+git config --global user.name "Paul Schnetzinger"
+```
 
 ## nvm
 ```sh

@@ -2,7 +2,34 @@
 
 ## Installation
 
-### PHP in wsl
+### WSL
+Turn on Windows Feature "Windows Subsystem for Linux" via Admin-PowerShell
+```sh
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
+Enable Virtual machine via Admin-PowerShell
+```sh
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+```
+
+Enable WSL 2
+```sh
+wsl.exe --set-default-version 2
+```
+
+#### To install Ubuntu
+* Open Windows Store
+* Search Ubuntu
+* Install Ubuntu 20.04 LTS
+
+
+### Install git
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git
+
+### Install PHP in wsl
 
 ```sh
 sudo add-apt-repository ppa:ondrej/php
@@ -27,7 +54,7 @@ php --ini
 curl.cainfo = C:\php\cacert.pem
 ```
 
-### composer in wsl
+### Install composer in wsl
 
 ```sh
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -35,6 +62,10 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
 ```
+
+## GitHub
+
+Connect shell to github. See ubuntu-README.
 
 ## Git
 
