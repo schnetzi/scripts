@@ -2,7 +2,7 @@
 
 ## Installation
 
-### WSL
+### Install WSL
 Turn on Windows Feature "Windows Subsystem for Linux" via Admin-PowerShell
 ```sh
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -18,7 +18,7 @@ Enable WSL 2
 wsl.exe --set-default-version 2
 ```
 
-#### Install Ubuntu
+#### Install Ubuntu-WSL
 
 * Open Windows Store
 * Search Ubuntu
@@ -92,11 +92,37 @@ To get the font working properly follow these steps:
 * Go to font
 * Select "DejaVu Sans Mono for Powerline"
 
-## GitHub
+### Install Node
+
+Preparation
+```sh
+sudo apt-get install -y \
+  apt-transport-https \
+  lsb-release \
+  ca-certificates \
+  build-essential \
+  curl wget unzip zip tmux git
+```
+
+Install node in windows from [Node.js Website](https://nodejs.org/en/download/).
+```sh
+sudo apt-get install curl
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+nvm install node
+```
+
+Check if installation worked
+```sh
+node --version
+npm --version
+```
+[Docs on microsoft](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2)
+
+## Setup GitHub
 
 Connect shell to github. See [ubuntu-README.md](../ubuntu/README.md#github).
 
-## git settings
+## Setup git settings
 
 ### Windows folder location
 
@@ -117,3 +143,5 @@ or
 ```
 C:\Dokumente und Einstellungen\[Username]\Eigene Dateien\WindowsPowerShell
 ```
+
+## 
