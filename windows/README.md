@@ -25,11 +25,13 @@ wsl.exe --set-default-version 2
 
 
 ### Install git
+```sh
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get update
 sudo apt-get install git
+```
 
-### Install PHP in wsl
+### Install PHP in WSL
 
 ```sh
 sudo add-apt-repository ppa:ondrej/php
@@ -54,7 +56,7 @@ php --ini
 curl.cainfo = C:\php\cacert.pem
 ```
 
-### Install composer in wsl
+### Install composer in WSL
 
 ```sh
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -65,7 +67,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 ## GitHub
 
-Connect shell to github. See ubuntu-README.
+Connect shell to github. See [ubuntu-README.md](../ubuntu/README.md).
 
 ## Git
 
