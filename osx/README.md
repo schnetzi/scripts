@@ -26,7 +26,7 @@ ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 Add ssh-key to SSH-Keys on GitHub-website.
 
 ## Setup git
-Copy `.gitconfig` from dotfiles or configure it yourself like that.
+Copy `.gitconfig` from [dotfiles](https://github.com/schnetzi/dotfiles) or configure it yourself like that.
 
 ```sh
 git config --global user.email "schnetzi@users.noreply.github.com"
