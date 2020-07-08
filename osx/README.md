@@ -35,7 +35,7 @@ git config --global user.name "schnetzi"
 
 ## nvm
 ```sh
-brew install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
 Add the following to .zshrc
