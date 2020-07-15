@@ -48,3 +48,20 @@ To install the latest version run this
 ```sh
 nvm install node
 ```
+
+## MySQL
+```sh
+brew install mysql
+brew services start mysql
+mysql_secure_installation
+```
+
+To login type the following and then enter your password.
+```sh
+mysql -u root -p
+```
+
+To make the login available for Larave run the following MySQL command
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+```
