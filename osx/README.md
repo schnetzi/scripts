@@ -1,4 +1,4 @@
-# Ubuntu
+# Mac OS X
 
 ## Prerequisites
 ```sh
