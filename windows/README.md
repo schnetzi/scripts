@@ -3,29 +3,33 @@
 ## Installation
 
 ### Install WSL
+
 Turn on Windows Feature "Windows Subsystem for Linux" via Admin-PowerShell
+
 ```sh
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
 Enable Virtual machine via Admin-PowerShell
+
 ```sh
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
 Enable WSL 2
+
 ```sh
 wsl.exe --set-default-version 2
 ```
 
 #### Install Ubuntu-WSL
 
-* Open Windows Store
-* Search Ubuntu
-* Install Ubuntu 20.04 LTS
-
+- Open Windows Store
+- Search Ubuntu
+- Install Ubuntu 20.04 LTS
 
 ### Install git
+
 ```sh
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get update
@@ -67,34 +71,40 @@ sudo mv composer.phar /usr/local/bin/composer
 ```
 
 ### Install zsh
+
 See guide in [ubuntu-README.md](../ubuntu/README.md#zsh)
 
 Clone the repository for the fonts with wsl
+
 ```sh
 git clone https://github.com/powerline/fonts.git
 ```
 
 Open PowerShell and execute the installer in the fonts folder.
+
 ```
 .\install.ps1
 ```
+
 When getting errors for script execution look [here for Restriction Cause](#powershell-restriction).
 
 Afterwards you can set the value back running the following:
+
 ```sh
 Set-ExecutionPolicy Restricted
 ```
 
 To get the font working properly follow these steps:
 
-* Open WSL
-* Right click at the top menu bar and choose settings
-* Go to font
-* Select "DejaVu Sans Mono for Powerline"
+- Open WSL
+- Right click at the top menu bar and choose settings
+- Go to font
+- Select "DejaVu Sans Mono for Powerline"
 
 ### Install Node
 
 Preparation
+
 ```sh
 sudo apt-get install -y \
   apt-transport-https \
@@ -105,6 +115,7 @@ sudo apt-get install -y \
 ```
 
 Install node in windows from [Node.js Website](https://nodejs.org/en/download/).
+
 ```sh
 sudo apt-get install curl
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
@@ -112,10 +123,12 @@ nvm install node
 ```
 
 Check if installation worked
+
 ```sh
 node --version
 npm --version
 ```
+
 [Docs on microsoft](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2)
 
 ## Setup GitHub
@@ -127,7 +140,9 @@ Connect shell to github. See [ubuntu-README.md](../ubuntu/README.md#github).
 ### Windows folder location
 
 #### <a name="powershell-restriction"></a>PowerShell Restriction
+
 PowerShell restricts scripts by default. To disable that (not recommended but needed to work) run the following in admin-PowerShell
+
 ```sh
 Set-ExecutionPolicy Unrestricted
 ```
@@ -144,4 +159,4 @@ or
 C:\Dokumente und Einstellungen\[Username]\Eigene Dateien\WindowsPowerShell
 ```
 
-## 
+##
