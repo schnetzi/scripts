@@ -115,7 +115,7 @@ phpbrew ext install zlib
 phpbrew ext install xdebug
 ```
 
-Check for php -v if libsodium could be installed correctly.  
+Check for `php -v` if libsodium could be installed correctly.  
 Trick was to copy the sodium.so to libsodium.so
 
 ### XDebug
