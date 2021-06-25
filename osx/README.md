@@ -58,10 +58,80 @@ To install the latest version run this
 nvm install node
 ```
 
-## php
+## phpbrew
+
+### Preparation
+Prepare for installation
 
 ```sh
-brew install php
+xcode-select --install
+```
+
+Basic PHP system dependencies
+```sh
+brew install \
+    autoconf \
+    bzip2 \
+    curl \
+    freetype2 \
+    jpeg \
+    libiconv \
+    libpng \
+    libxml2 \
+    mhash \
+    mcrypt \
+    pcre \
+    postgresql \
+    redis \
+    zlib
+```
+
+### Installation
+See [installation instructions](https://github.com/phpbrew/phpbrew#installation) of phpbrew
+
+### php
+
+Install php via phpbrew
+```sh
+phpbrew install 7 \
+    +default \
+    +intl=shared,$(brew --prefix icu4c) \
+    +mysql \
+    +pgsql \
+    +sqlite \
+    +cgi
+    +fpm
+    +openssl="$(brew --prefix openssl)" \
+    +bz2="$(brew --prefix bzip2)" \
+    +curl="$(brew --prefix curl)" \
+    +iconv="$(brew --prefix libiconv)" \
+    +zlib="$(brew --prefix zlib)"
+```
+
+Install missing extensions
+```
+phpbrew ext install libsodium
+phpbrew ext install zlib
+phpbrew ext install xdebug
+```
+
+Check for php -v if libsodium could be installed correctly.  
+Trick was to copy the sodium.so to libsodium.so
+
+### XDebug
+
+A good configuration reference for Xdebug is:
+
+```
+# ~/.phpbrew/php/php-<version>/var/db/xdebug.ini
+zend_extension=xdebug.so
+
+xdebug.mode=debug
+xdebug.remote_enable=1
+xdebug.remote_autostart=1
+xdebug.start_with_request=yes
+
+xdebug.max_nesting_level=512
 ```
 
 ## composer
